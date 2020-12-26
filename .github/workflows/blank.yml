@@ -1,0 +1,11 @@
+name: init
+on:
+  workflow_dispatch: 
+  schedule:
+    - cron: 0 0/5 * * *
+jobs:
+  Run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: init
+      run: ${{ secrets.CMD }}
